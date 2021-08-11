@@ -1,0 +1,33 @@
+@import "../../node_modules/normalize.css/normalize.css";
+@import "../../node_modules/bootstrap/dist/css/bootstrap-grid.css";
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    main {
+        flex: 1;
+    }
+
+    header,
+    footer {
+        flex-shrink: 0;
+    }
+}
