@@ -1,0 +1,114 @@
+@import "vars";
+
+.header {
+  margin-bottom: 15px;
+}
+
+.navigation {
+  background-color: $grey;
+  padding: 11px 0;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+
+  li {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  a {
+    font-size: 12px;
+    color: #757575;
+  }
+}
+
+.main-top {
+  padding: 16px 0;
+  border-bottom: 1px solid #e0e0e0;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+
+    .logo {
+      margin-right: 30px;
+    }
+
+    span {
+      font-size: 12px;
+      display: block;
+      max-width: 205px;
+    }
+  }
+
+  &__info {
+    display: flex;
+
+    .top-info:not(:last-child) {
+      margin-right: 70px;
+    }
+  }
+}
+
+.logo {
+  img {
+    display: block;
+  }
+}
+
+.top-info {
+  span {
+    display: block;
+  }
+
+  &__value {
+    font-weight: bold;
+    font-size: 16px;
+    color: $blue;
+    margin-bottom: 5px;
+
+    a {
+      color: $blue;
+    }
+  }
+
+  &__descr {
+    font-size: 12px;
+  }
+}
+
+.categories-links {
+  padding: 15px 0;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  li {
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+  }
+
+  a {
+    font-size: 14px;
+    color: $main-color;
+  }
+}

@@ -1,33 +1,27 @@
 @import "../../node_modules/normalize.css/normalize.css";
 @import "../../node_modules/bootstrap/dist/css/bootstrap-grid.css";
 
-html {
-    box-sizing: border-box;
-}
+@import "vars";
+@import "common";
+@import "header";
 
-*, *:before, *:after {
-    box-sizing: inherit;
-}
+.service-cards {
+    margin-top: -20px;
 
-html, body {
-    height: 100%;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-}
-
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-
-    main {
-        flex: 1;
+    .service-card {
+        margin-top: 20px;
     }
+}
 
-    header,
-    footer {
-        flex-shrink: 0;
-    }
+.service-card {
+    background-color: $grey;
+    border-radius: 15px;
+    height: 300px;
+    padding: 50px 30px 0;
+    overflow: hidden;
+    position: relative;
+    background-position: right bottom;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    font-size: 21px;
 }
