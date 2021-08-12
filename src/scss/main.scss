@@ -5,10 +5,10 @@
 @import "common";
 @import "header";
 
-.service-cards {
+.cards-wrapper {
     margin-top: -20px;
 
-    .service-card {
+    & > div {
         margin-top: 20px;
     }
 }
@@ -24,4 +24,112 @@
     background-size: 100%;
     background-repeat: no-repeat;
     font-size: 21px;
+}
+
+.news-card {
+    border-radius: 15px;
+    border: 1px solid #e0e0e0;
+    padding: 50px 20px 30px;
+
+    &__img {
+        margin-bottom: 50px;
+        text-align: center;
+
+        img {
+            object-fit: cover;
+        }
+    }
+
+    &__info {
+        padding: 0 10px;
+    }
+
+    &__date {
+        font-size: 14px;
+        color: $blue;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        margin: 0 0 20px;
+        font-weight: 400;
+        font-size: 20px;
+    }
+
+    &__descr {
+        font-size: 14px;
+        color: #8b8b8b;
+        margin: 0;
+    }
+}
+
+.exclusive-product {
+    border-radius: 15px;
+    background: #000;
+    text-align: center;
+    color: #fff;
+    padding: 100px 20px;
+    height: 570px;
+    overflow: hidden;
+
+    &__name {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    &__descr {
+        font-size: 16px;
+        max-width: 400px;
+        margin: 0 auto 100px;
+    }
+
+    &__img {
+        max-width: 315px;
+        text-align: center;
+        margin: auto;
+
+        img {
+            object-fit: cover;
+        }
+    }
+}
+
+.logo-card {
+    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+    text-align: center;
+    padding: 12px;
+
+    img {
+        object-fit: cover;
+        max-height: 70px;
+    }
+}
+
+.achievement {
+    display: flex;
+    align-items: center;
+
+    &__icon {
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        background-color: $blue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        flex-shrink: 0;
+    }
+
+    &__title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    &__descr {
+        font-size: 14px;
+    }
 }
