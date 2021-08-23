@@ -56,8 +56,8 @@
             <section class="section">
                 <div class="container">
                     <div class="section__header">
-                        <h2 class="section__title">Продажа кондиционеров, монтаж вентиляции и поставка <br>
-                            холодильного оборудования в Нижнем Новгороде</h2>
+                        <h1 class="section__title">Продажа кондиционеров, монтаж вентиляции и поставка <br>
+                            холодильного оборудования в Нижнем Новгороде</h1>
                     </div>
 
                     <div class="section__inner">
@@ -71,7 +71,9 @@
                 </div>
             </section>
 
-            <include src="src/templates/sections/last-news.html"></include>
+            <include src="src/templates/sections/last-news.html">
+                { "title": "Последние новости" }
+            </include>
         </main>
 
         <include src="src/templates/footer.html"></include>

@@ -4,19 +4,24 @@
 @import "../../node_modules/@fancyapps/ui/dist/carousel.css";
 
 @import "vars";
+@import "mixins";
 @import "common";
 @import "header";
-@import "mixins";
+@import "footer";
 
 .cards-wrapper {
-    margin-top: -30px;
+    margin-top: -20px;
 
     & > div {
-        margin-top: 30px;
+        margin-top: 20px;
     }
 }
 
 .service-card {
+    display: block;
+    color: $main-color;
+    text-decoration: none;
+    outline: 0;
     background-color: $grey;
     border-radius: 15px;
     height: 300px;
@@ -27,12 +32,42 @@
     background-size: 100%;
     background-repeat: no-repeat;
     font-size: 21px;
+
+    @include _768() {
+        font-size: 16px;
+        height: 220px;
+        padding-top: 30px;
+    }
+}
+
+.more-news {
+    font-size: 18px;
+    display: inline-flex;
+    align-items: center;
+
+    &:after {
+        content: '';
+        width: 6px;
+        height: 10px;
+        display: block;
+        margin-left: 12px;
+        background: url('../img/right-arrow.svg') no-repeat center;
+    }
 }
 
 .news-card {
     border-radius: 15px;
     border: 1px solid #e0e0e0;
     padding: 50px 20px 30px;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+        .news-card__title {
+            color: $blue;
+        }
+    }
 
     &__img {
         margin-bottom: 50px;
@@ -58,6 +93,7 @@
         margin: 0 0 20px;
         font-weight: 400;
         font-size: 20px;
+        transition: 0.3s color ease-in-out;
     }
 
     &__descr {
@@ -82,6 +118,7 @@
 }
 
 .exclusive-product {
+    display: block;
     border-radius: 15px;
     background: #000;
     text-align: center;
@@ -89,6 +126,11 @@
     padding: 100px 20px;
     height: 570px;
     overflow: hidden;
+
+    @include _768() {
+        height: initial;
+        padding: 50px 20px;
+    }
 
     &__name {
         font-size: 30px;
@@ -99,6 +141,10 @@
         font-size: 16px;
         max-width: 400px;
         margin: 0 auto 100px;
+
+        @include _768() {
+            margin-bottom: 50px;
+        }
     }
 
     &__img {
@@ -201,3 +247,43 @@
         }
     }
 }
+
+.calc {
+    background: $grey url('../img/calc-bg.jpg') no-repeat top center;
+    min-height: 660px;
+    padding: 45px 0 50px;
+
+    .container {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__top {
+        margin-bottom: 25px;
+        padding-top: 10px;
+    }
+
+    &__card {
+        background: #fff;
+        border-radius: 10px;
+        padding: 30px;
+        max-width: 500px;
+        width: 100%;
+    }
+
+    &__title {
+        font-size: 28px;
+        font-weight: 400;
+        margin-bottom: 15px;
+    }
+}
+
+.policy-checkbox {
+    margin: 0 !important;
+
+    span {
+        max-width: 230px;
+        display: inline-block;
+    }
+}
+
