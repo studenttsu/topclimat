@@ -2,6 +2,10 @@
 
 .header {
   margin-bottom: 15px;
+
+  &__order-btn {
+    min-height: 50px;
+  }
 }
 
 .navigation {
@@ -25,6 +29,11 @@
   a {
     font-size: 12px;
     color: #757575;
+    transition: .3s color ease-in-out;
+
+    &:hover {
+      color: #000;
+    }
   }
 }
 
@@ -110,5 +119,14 @@
   a {
     font-size: 14px;
     color: $main-color;
+    transition: .3s color ease-in-out;
+
+    &:hover {
+      color: $blue;
+    }
   }
+}
+
+.sub-links {
+  display: none;
 }

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TOP climate</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./scss/main.scss">
+</head>
+
+<body>
+
+    <include src="src/templates/header.html"></include>
+
+    <div class="wrapper">
+        <main class="main">
+            <div class="container">
+                <ul class="breadcrumbs">
+                    <li><a href="/">Главная</a></li>
+                    <li>ТОП</li>
+                </ul>
+            </div>
+
+            <section>
+                <div class="container">
+                    <h1>Топовое климатическое
+                        оборудование в Нижнем Новгороде</h1>
+                </div>
+
+                <include src="src/templates/sections/achievements.html"></include>
+
+                <div class="row cards-wrapper">
+                    <div class="col-lg-6">
+                        <div class="exclusive-product">
+                            <div class="exclusive-product__name">Daichi Alpha</div>
+                            <div class="exclusive-product__descr">Первый в России Облачный кондиционер. <br>
+                                Управляется со смартфона, работает по подписке</div>
+                            <div class="exclusive-product__img"><img src="img/assets/img6.png" alt=""></div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="exclusive-product">
+                            <div class="exclusive-product__name">Daichi Alpha</div>
+                            <div class="exclusive-product__descr">Первый в России Облачный кондиционер. <br>
+                                Управляется со смартфона, работает по подписке</div>
+                            <div class="exclusive-product__img"><img src="img/assets/img6.png" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <include src="src/templates/sections/calc.html"></include>
+
+            <include src="src/templates/sections/catalog.html"></include>
+
+            <include src="src/templates/sections/dealers.html"></include>
+
+            <include src="src/templates/sections/services.html"></include>
+
+            <include src="src/templates/sections/last-news.html">
+                { "title": "Последние новости" }
+            </include>
+        </main>
+
+        <include src="src/templates/footer.html"></include>
+    </div>
+
+    <div class="hidden">
+        <include src="src/templates/dialogs/order-dialog.html"></include>
+    </div>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>

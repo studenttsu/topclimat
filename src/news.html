@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TOP climate</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./scss/main.scss">
+</head>
+
+<body>
+
+    <include src="src/templates/header.html"></include>
+
+    <div class="wrapper">
+        <main class="main">
+            <div class="container">
+                <ul class="breadcrumbs">
+                    <li><a href="/">Главная</a></li>
+                    <li>Новости</li>
+                </ul>
+            </div>
+
+            <section>
+                <div class="container">
+                    <h1>Новости</h1>
+
+                    <div class="row cards-wrapper">
+                        <div class="col-lg-4">
+                            <div class="news-card">
+                                <div class="news-card__img"><img src="img/assets/img5.png" alt=""></div>
+                                <div class="news-card__info">
+                                    <span class="news-card__date">1.08.2021</span>
+                                    <h3 class="news-card__title">Новый сайт TopClimate</h3>
+                                    <p class="news-card__descr">Краткое описание новости, которое обрывается автоматически на третей строке и добавляется три точки в конце...</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="news-card">
+                                <div class="news-card__img"><img src="img/assets/img5.png" alt=""></div>
+                                <div class="news-card__info">
+                                    <span class="news-card__date">1.08.2021</span>
+                                    <h3 class="news-card__title">Новый сайт TopClimate</h3>
+                                    <p class="news-card__descr">Краткое описание новости, которое обрывается автоматически на третей строке и добавляется три точки в конце...</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="news-card">
+                                <div class="news-card__img"><img src="img/assets/img5.png" alt=""></div>
+                                <div class="news-card__info">
+                                    <span class="news-card__date">1.08.2021</span>
+                                    <h3 class="news-card__title">Новый сайт TopClimate</h3>
+                                    <p class="news-card__descr">Краткое описание новости, которое обрывается автоматически на третей строке и добавляется три точки в конце...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <include src="src/templates/sections/calc.html"></include>
+
+            <include src="src/templates/sections/catalog.html"></include>
+
+            <include src="src/templates/sections/dealers.html"></include>
+
+            <include src="src/templates/sections/exclusive-products.html"></include>
+
+            <include src="src/templates/sections/services.html"></include>
+        </main>
+
+        <include src="src/templates/footer.html"></include>
+    </div>
+
+    <div class="hidden">
+        <include src="src/templates/dialogs/order-dialog.html"></include>
+    </div>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>

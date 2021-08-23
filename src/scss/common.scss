@@ -58,3 +58,66 @@ img {
     font-weight: 400;
   }
 }
+
+.hidden {
+  display: none;
+}
+
+.btn {
+  outline: 0;
+  cursor: pointer;
+  border: none;
+  background: $blue;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  padding: 14px 20px;
+  border-radius: 5px;
+  transition: 0.25s background-color ease;
+  text-decoration: none;
+  display: inline-block;
+
+  &:hover {
+    background-color: darken($blue, 6%);
+  }
+
+  &:active {
+    background-color: darken($blue, 15%);
+  }
+
+  &--light {
+    background-color: $grey;
+    color: $main-color;
+
+    &:hover {
+      background-color: darken($grey, 6%);
+    }
+
+    &:active {
+      background-color: darken($grey, 15%);
+    }
+  }
+}
+
+.dragscroll {
+  position: relative;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.rail-list {
+  height: inherit;
+  position: absolute;
+  left: 0;
+  top: 0;
+  cursor: -webkit-grab;
+  cursor: grab;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
