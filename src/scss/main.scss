@@ -716,3 +716,63 @@
         font-weight: bold;
     }
 }
+
+.article {
+    padding: 35px 0;
+
+    img {
+        border-radius: 15px;
+        display: block;
+        width: 100%;
+    }
+}
+
+.service-article {
+    &__text {
+        max-width: 770px;
+        margin: auto;
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 36px;
+        font-weight: bold;
+        margin: 25px 0 30px;
+    }
+
+    &:not(:last-of-type) {
+        margin-bottom: 60px;
+    }
+
+    img {
+        margin: 35px 0;
+    }
+
+    ul {
+        margin: 30px auto;
+        max-width: 450px;
+        text-align: left;
+    }
+}
+
+.service-steps {
+    & > div:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    &__title {
+        font-size: 21px;
+        font-weight: normal;
+        margin: 0 0 15px;
+    }
+}
+
+.section-name {
+    font-size: 20px;
+    color: $blue;
+}
+
+.actual-price {
+    padding: 35px 0;
+    background-color: $grey;
+}
