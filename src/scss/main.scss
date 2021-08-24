@@ -389,14 +389,12 @@
     }
 
     &__inner {
-        max-width: 470px;
         padding: 45px 0;
 
         @include _768() {
             padding: 0;
             margin-bottom: 60px;
             text-align: center;
-            max-width: 100%;
         }
     }
 
@@ -445,7 +443,7 @@
     background-color: #e3eaff;
 }
 
-.category-about {
+.section-about {
     padding: 40px 0 35px;
 
     h2 {
@@ -641,5 +639,63 @@
 
     .btn {
         background-color: #cc2229;
+    }
+}
+
+.series {
+    .series-card:not(:last-child) {
+        margin-bottom: 30px;
+    }
+}
+
+.series-card {
+    &__title {
+        font-size: 21px;
+        margin-bottom: 25px;
+
+        @include _768() {
+            text-align: center;
+        }
+    }
+
+    &__descr {
+        font-size: 14px;
+        margin: 0 0 40px;
+    }
+
+    &__img {
+        padding-right: 0;
+
+        @include _768() {
+            padding-right: 15px;
+            margin-bottom: 30px;
+
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+
+    &__inner {
+        padding-left: 70px;
+        max-width: 550px;
+
+        .btn {
+            height: 50px;
+            width: 100%;
+            max-width: 190px;
+        }
+
+        @include _768() {
+            max-width: 100%;
+            padding-left: 15px;
+
+            .btn {
+                margin: auto;
+                display: block;
+                max-width: 300px;
+            }
+        }
     }
 }
