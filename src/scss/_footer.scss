@@ -41,8 +41,18 @@
   .banner-content {
     max-width: 370px;
 
-    @include _480() {
+    @include _768() {
       max-width: 100%;
+    }
+  }
+
+  @include _768() {
+    .container {
+      background-position: center bottom;
+      background-size: 300px;
+      padding-bottom: 300px;
+      padding-left: 15px;
+      padding-right: 15px;
     }
   }
 }
@@ -73,16 +83,6 @@
 
   .btn {
     font-weight: bold;
-  }
-
-  @include _480() {
-    .container {
-      background-position: center bottom;
-      background-size: 300px;
-      padding-bottom: 300px;
-      padding-left: 15px;
-      padding-right: 15px;
-    }
   }
 }
 
