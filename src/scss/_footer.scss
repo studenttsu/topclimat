@@ -38,21 +38,41 @@
     padding: 60px 0 45px 30px;
   }
 
-  &__inner {
+  .banner-content {
     max-width: 370px;
 
     @include _480() {
       max-width: 100%;
     }
   }
+}
 
+.banner-content {
   &__title {
     font-size: 28px;
     margin-bottom: 23px;
+
+    @include _480() {
+      font-size: 24px;
+
+      br {
+        display: none;
+      }
+    }
   }
 
   &__descr {
     margin-bottom: 30px;
+
+    @include _480() {
+      br {
+        display: none;
+      }
+    }
+  }
+
+  .btn {
+    font-weight: bold;
   }
 
   @include _480() {

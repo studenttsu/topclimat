@@ -1,8 +1,6 @@
 @import "vars";
 
 .header {
-  margin-bottom: 15px;
-
   &__order-btn {
     min-height: 50px;
   }
@@ -39,7 +37,7 @@
 
 .main-top {
   padding: 16px 0;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid $border-color;
 
   .container {
     display: flex;

@@ -71,7 +71,7 @@
 
 .news-card {
     border-radius: 15px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid $border-color;
     padding: 50px 20px 30px;
     display: block;
     text-decoration: none;
@@ -174,7 +174,7 @@
 
 .logo-card {
     border-radius: 5px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid $border-color;
     text-align: center;
     padding: 12px;
     display: block;
@@ -188,6 +188,10 @@
         object-fit: cover;
         max-height: 70px;
     }
+}
+
+.achievements {
+    padding: 45px 15px;
 }
 
 .achievement {
@@ -303,6 +307,7 @@
     background: $grey url('../img/calc-bg.jpg') no-repeat top center;
     min-height: 660px;
     padding: 45px 0 50px;
+    margin: 35px 0 40px;
 
     .container {
         display: flex;
@@ -338,3 +343,281 @@
     }
 }
 
+.breadcrumbs {
+    color: #757575;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 12px;
+    margin-bottom: 15px;
+
+    li {
+        display: flex;
+        align-items: center;
+
+        &:not(:last-child):after {
+            content: '—';
+            display: block;
+            margin: 0 6px;
+            color: #757575;
+            font-size: 12px;
+        }
+    }
+
+    a {
+        color: #757575;
+        transition: .3s ease color;
+
+        &:hover {
+            color: lighten(#757575, 20%);
+        }
+    }
+}
+
+.hero {
+    min-height: 450px;
+    padding: 90px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &--white {
+        color: #fff;
+    }
+
+    &__inner {
+        max-width: 470px;
+    }
+
+    &__title {
+        font-size: 36px;
+        font-weight: bold;
+        margin: 0 0 30px;
+    }
+
+    &__subtitle {
+        font-size: 18px;
+        margin: 0;
+    }
+
+    &__subtitle + &__actions {
+        margin-top: 50px;
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .btn {
+            min-width: 165px;
+            min-height: 50px;
+
+            &:not(:last-child) {
+                margin-right: 12px;
+            }
+        }
+    }
+}
+
+.category-about {
+    padding: 40px 0 35px;
+
+    h2 {
+        font-size: 36px;
+        font-weight: normal;
+    }
+
+    img {
+        display: block;
+    }
+}
+
+.tag {
+    white-space: nowrap;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 18px;
+    font-size: 14px;
+    display: inline-block;
+    border-radius: 5px;
+    
+    &--orange {
+        background-color: #fcf4ed;
+        color: #ba8658;
+    }
+
+    &--green {
+        background-color: #edfcef;
+        color: #528c5a;
+    }
+}
+
+.popular-products {
+    max-width: 830px;
+    margin: auto;
+
+    &__item:not(:last-child) {
+        margin-bottom: 30px;
+    }
+}
+
+.popular-product {
+    border: 1px solid $border-color;
+    border-radius: 15px;
+    padding: 20px 30px 25px 0;
+    display: flex;
+
+    &--blurred {
+        filter: blur(6.4px);
+        pointer-events: none;
+        opacity: .7;
+    }
+
+    @include _768() {
+        flex-direction: column;
+        padding: 25px;
+    }
+
+    @include _480() {
+        padding: 20px 15px;
+    }
+
+    &__tags-mobile {
+        display: none;
+
+        @include _768() {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+
+            .tag:not(:last-child) {
+                margin-right: 7px;
+            }
+        }
+    }
+
+    &__img {
+        max-width: 300px;
+        padding: 0 30px;
+        display: flex;
+        align-items: center;
+
+        @include _768() {
+            margin: 0 auto 30px;
+            max-width: 400px;
+        }
+    }
+
+    &__inner {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__about {
+        flex: 1;
+    }
+
+    &__tags {
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+
+        @include _768() {
+            display: none;
+        }
+
+        .tag:not(:last-child) {
+            margin-right: 7px;
+        }
+    }
+
+    &__name {
+        font-size: 21px;
+        margin-bottom: 25px;
+
+        @include _768() {
+            text-align: center;
+        }
+    }
+
+    &__descr {
+        margin: 0 0 25px;
+        padding: 0;
+        list-style: none;
+        font-size: 14px;
+        color: #6f6f6f;
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        @include _480() {
+            flex-direction: column;
+        }
+    }
+
+    &__price {
+        font-size: 30px;
+        white-space: nowrap;
+        margin-right: 15px;
+
+        @include _480() {
+            margin-bottom: 30px;
+            margin-right: 0;
+        }
+    }
+
+    &__action {
+        width: 170px;
+        height: 50px;
+    }
+}
+
+.price-banner {
+    background: rgb(108,155,255);
+    background: linear-gradient(180deg, rgba(85,170,255,1) 0%, rgba(79,156,255,1) 4%, rgba(0,128,246,1) 100%);
+    color: #fff;
+    padding: 40px 30px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+
+    @include _768() {
+        flex-direction: column;
+    }
+
+    label, .checkbox, a {
+        color: #fff;
+    }
+
+    &__inner {
+        max-width: 370px;
+    }
+
+    &__img {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex: 1;
+        min-width: 340px;
+        position: relative;
+        top: 30px;
+
+        @include _768() {
+            min-width: 300px;
+        }
+    }
+
+    .btn {
+        background-color: #cc2229;
+    }
+}
