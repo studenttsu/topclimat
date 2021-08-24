@@ -127,6 +127,15 @@
   }
 }
 
+.top-link {
+  display: flex;
+  align-items: center;
+
+  img {
+    margin-right: 8px;
+  }
+}
+
 .sub-links {
   display: none;
 }

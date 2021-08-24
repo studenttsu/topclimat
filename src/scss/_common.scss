@@ -5,12 +5,6 @@ html {
   box-sizing: border-box;
 }
 
-@media (max-width: 576px) {
-  .col-sm-6 {
-    flex: 50%;
-  }
-}
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -22,6 +16,7 @@ html, body {
 body {
   color: $main-color;
   font-family: 'Roboto', sans-serif;
+  min-width: 320px;
 }
 
 a {
@@ -57,7 +52,7 @@ img {
   padding: 30px 0 35px;
 
   &__header {
-    margin-bottom: 40px;
+    margin-bottom: 35px;
   }
 
   &__title {
@@ -96,6 +91,8 @@ img {
   transition: 0.25s background-color ease;
   text-decoration: none;
   display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
 
   &:hover {
     background-color: darken($blue, 6%);

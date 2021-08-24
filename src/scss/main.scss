@@ -18,25 +18,39 @@
 }
 
 .service-card {
-    display: block;
-    color: $main-color;
+    display: flex;
+    flex-direction: column;
     text-decoration: none;
     outline: 0;
     background-color: $grey;
     border-radius: 15px;
     height: 300px;
-    padding: 50px 30px 0;
     overflow: hidden;
     position: relative;
     background-position: right bottom;
     background-size: 100%;
     background-repeat: no-repeat;
-    font-size: 21px;
 
     @include _768() {
-        font-size: 16px;
         height: 220px;
-        padding-top: 30px;
+    }
+
+    &__name {
+        padding: 50px 30px 0;
+        color: $main-color;
+        font-size: 21px;
+
+        @include _768() {
+            font-size: 18px;
+            padding-top: 30px;
+        }
+    }
+
+    &__img {
+        margin-top: auto;
+        flex-shrink: 0;
+        background: right 50%/contain no-repeat;
+        flex-grow: 1;
     }
 }
 
@@ -163,6 +177,12 @@
     border: 1px solid #e0e0e0;
     text-align: center;
     padding: 12px;
+    display: block;
+    transition: 0.2s box-shadow ease;
+
+    &:hover {
+        box-shadow: 0 3px 10px rgb(0 0 0 / 8%);
+    }
 
     img {
         object-fit: cover;
@@ -242,9 +262,40 @@
             min-width: 140px;
 
             &:not(:last-child) {
-                margin-right: 10px;
+                margin-right: 12px;
             }
         }
+    }
+}
+
+.cat-card {
+    display: flex;
+    flex-direction: column;
+    background: $grey;
+    height: 170px;
+    border-radius: 5px;
+    text-decoration: none;
+    outline: 0;
+    color: $main-color;
+
+    &--dark {
+        background-color: #000;
+        color: #fff;
+    }
+
+    &__name {
+        font-size: 16px;
+        padding: 20px 22px 0;
+    }
+
+    &__img {
+        margin-top: auto;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+        background: 50% 50%/contain no-repeat;
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
     }
 }
 

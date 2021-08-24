@@ -1,4 +1,5 @@
 @import "vars";
+@import "mixins";
 
 .short-contacts {
   background: #e0eaff;
@@ -8,13 +9,24 @@
     margin-right: 16px;
   }
 
-  span, a {
+  div, a {
     color: #000;
     font-size: 16px;
   }
 
   a {
     font-weight: bold;
+    white-space: nowrap;
+  }
+
+  @include _480() {
+    span {
+      display: block;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
   }
 }
 
@@ -28,6 +40,10 @@
 
   &__inner {
     max-width: 370px;
+
+    @include _480() {
+      max-width: 100%;
+    }
   }
 
   &__title {
@@ -38,25 +54,51 @@
   &__descr {
     margin-bottom: 30px;
   }
+
+  @include _480() {
+    .container {
+      background-position: center bottom;
+      background-size: 300px;
+      padding-bottom: 300px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
 }
 
 .footer {
   background-color: $grey;
   padding: 45px 0 30px;
 
+  @include _768() {
+    padding: 30px 0;
+  }
+
   .container {
     display: flex;
     justify-content: space-between;
+
+    @include _768() {
+      display: block;
+    }
   }
 
   &__links {
     display: flex;
+
+    @include _768() {
+      display: none;
+    }
   }
 
   &__info {
     font-size: 11px;
     color: #6f6f6f;
     max-width: 300px;
+
+    @include _768() {
+      max-width: 100%;
+    }
 
     .top-equipment {
       margin-bottom: 15px;
@@ -68,14 +110,48 @@
   }
 }
 
+.footer-links-mobile {
+  display: none;
+  margin-bottom: 30px;
+
+  a {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 10px;
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
+  @include _768() {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
 .footer-links {
   &--categories {
     margin-right: 75px;
+
+    @include _1170() {
+      margin-right: 30px;
+    }
   }
 
   &--brands,
   &--services {
     margin-right: 55px;
+
+    @include _1170() {
+      margin-right: 30px;
+    }
+  }
+
+  &--customers {
+    margin-right: 30px;
   }
 
   &__title {
@@ -132,6 +208,29 @@
   background-color: #eceef0;
   font-size: 11px;
   padding: 24px 0;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include _768() {
+      margin-top: -15px;
+
+      a {
+        flex: 40%;
+        text-align: center;
+        margin-top: 15px;
+      }
+    }
+
+    @include _480() {
+      a {
+        flex: 100%;
+      }
+    }
+  }
 
   a {
     color: #969696;
