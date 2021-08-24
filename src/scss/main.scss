@@ -123,6 +123,12 @@
         .news-card__img {
             max-height: 180px;
             margin-bottom: 25px;
+            overflow: hidden;
+
+            img {
+                object-fit: cover;
+                width: 100%;
+            }
         }
 
         .news-card__info {
