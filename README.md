@@ -4,7 +4,6 @@
 - [Главная](https://relaxed-keller-328afc.netlify.app/)
 - [404](https://relaxed-keller-328afc.netlify.app/404.html)
 - [О нас](https://relaxed-keller-328afc.netlify.app/about.html)
-- [Контакты](https://relaxed-keller-328afc.netlify.app/contacts.html)
 - [Услуги](https://relaxed-keller-328afc.netlify.app/uslugi.html)
 - [Услуга](https://relaxed-keller-328afc.netlify.app/usluga-page.html)
 - [Акции](https://relaxed-keller-328afc.netlify.app/akcii.html)
@@ -18,3 +17,4 @@
 - [Полупромышленное оборудование](https://relaxed-keller-328afc.netlify.app/polupromyshlennoe_oborudovanie.html)
 - [Топ](https://relaxed-keller-328afc.netlify.app/top.html)
 - [Топ1](https://relaxed-keller-328afc.netlify.app/top-page.html)
+- [Контакты](https://relaxed-keller-328afc.netlify.app/contacts.html)
