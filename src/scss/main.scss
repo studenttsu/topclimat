@@ -859,3 +859,26 @@
         }
     }
 }
+
+.order-modal {
+    max-width: 570px;
+    width: 100%;
+
+    &__header {
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 28px;
+        margin-bottom: 20px;
+
+        @include _480() {
+            font-size: 24px;
+        }
+    }
+
+    &__subtitle {
+        font-size: 14px;
+    }
+}

@@ -117,6 +117,10 @@ img {
     background-color: darken($blue, 15%);
   }
 
+  &--bold {
+    font-weight: bold;
+  }
+
   &--light {
     background-color: $grey;
     border-color: $grey;
@@ -355,4 +359,32 @@ img {
   height: 100%;
   border-width: 0;
   outline-width: 0;
+}
+
+.modal {
+  padding: 60px 100px;
+  border-radius: 5px;
+
+  @include _768() {
+    padding: 40px;
+  }
+
+  @include _480() {
+    padding: 30px;
+  }
+}
+
+.fancybox__backdrop {
+  background: rgba(#000, 0.7);
+}
+
+.fancybox__content>.carousel__button.is-close {
+  color: #b9b9b9;
+  top: 5px;
+  right: 5px;
+  box-shadow: none;
+
+  svg {
+    filter: none;
+  }
 }

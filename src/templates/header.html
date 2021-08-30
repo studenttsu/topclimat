@@ -16,18 +16,22 @@
 
     <div class="main-top">
         <div class="container">
-            <div class="main-top__logo">
-                <a href="/" class="logo"><img src="./img/logo.png" alt="TOP climate"></a>
-                <span>Продажа и монтаж климатического оборудования в Нижнем Новгороде</span>
+            <div class="main-top__left">
+                <button class="burger-btn"></button>
+
+                <div class="main-top__logo">
+                    <a href="/" class="logo"><img src="./img/logo.png" alt="TOP climate"></a>
+                    <span>Продажа и монтаж климатического оборудования в Нижнем Новгороде</span>
+                </div>
             </div>
 
             <div class="main-top__info">
-                <div class="top-info">
+                <div class="top-info top-info--address">
                     <span class="top-info__value"><a href="tel: 8 (831) 281-64-94">8 (831) 281-64-94</a></span>
                     <span class="top-info__descr">ул. Шекспира, д. 1Бк2, оф.11</span>
                 </div>
 
-                <div class="top-info">
+                <div class="top-info top-info--time">
                     <span class="top-info__value">с 9:00 до 18:00</span>
                     <span class="top-info__descr">Ежедневно</span>
                 </div>
@@ -41,18 +45,38 @@
         <div class="container">
             <ul>
                 <li><a href="#" class="top-link"><img src="img/fire.png" alt="">Топ</a></li>
-                <li>
+                <li class="with-secondary" data-category="sub-links1">
                     <a href="#">Бытовые сплит-системы</a>
 
-                    <div class="sub-links">
+                    <div class="sub-links" data-id="sub-links1">
                         <div class="container">
                             <ul>
-                                <li><a href="#">Настенные сплит-системы</a></li>
+                                <li><a href="#">Кассетные кондиционеры</a></li>
+                                <li><a href="#">Напольные кондиционеры</a></li>
+                                <li><a href="#">Настенные кондиционеры</a></li>
+                                <li><a href="#">Канальные кондиционеры</a></li>
+                                <li><a href="#">Кассетные кондиционеры</a></li>
+                                <li><a href="#">Напольные кондиционеры</a></li>
+                                <li><a href="#">Настенные кондиционеры</a></li>
+                                <li><a href="#">Канальные кондиционеры</a></li>
                             </ul>
                         </div>
                     </div>
                 </li>
-                <li><a href="#">Мультисплит системы</a></li>
+                <li class="with-secondary" data-category="sub-links2">
+                    <a href="#">Мультисплит системы</a>
+
+                    <div class="sub-links" data-id="sub-links2">
+                        <div class="container">
+                            <ul>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
                 <li><a href="#">Полупромышленное оборудование</a></li>
                 <li><a href="#">VRV системы</a></li>
                 <li><a href="#">Системы вентиляции</a></li>
@@ -62,3 +86,53 @@
     </nav>
 </header>
 
+<div class="mobile-menu">
+    <div class="mobile-menu__inner">
+        <div class="mobile-menu__top">
+            <button class="mobile-menu-close"></button>
+        </div>
+
+        <div class="mobile-menu__list">
+            <ul>
+                <li><a href="#" class="top-link"><img src="img/fire.png" alt="">Топ</a></li>
+                <li class="with-secondary">
+                    <div>
+                        <a href="#">Бытовые сплит-системы</a>
+                        <button class="arrow-btn"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24"><path d="M7.707 10.293a1 1 0 0 0-1.414 1.414l4.294 4.294c.781.781 2.043.783 2.826 0l4.294-4.294a1 1 0 0 0-1.414-1.414L12 14.586l-4.293-4.293z" fill="currentColor" stroke="none"></path></svg></button>
+                    </div>
+
+                    <ul class="sub-links">
+                        <li><a href="#">Кассетные кондиционеры</a></li>
+                        <li><a href="#">Напольные кондиционеры</a></li>
+                        <li><a href="#">Настенные кондиционеры</a></li>
+                        <li><a href="#">Канальные кондиционеры</a></li>
+                        <li><a href="#">Кассетные кондиционеры</a></li>
+                        <li><a href="#">Напольные кондиционеры</a></li>
+                        <li><a href="#">Настенные кондиционеры</a></li>
+                        <li><a href="#">Канальные кондиционеры</a></li>
+                    </ul>
+                </li>
+
+                <li class="with-secondary">
+                    <div>
+                        <a href="#">Мультисплит системы</a>
+                        <button class="arrow-btn"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24"><path d="M7.707 10.293a1 1 0 0 0-1.414 1.414l4.294 4.294c.781.781 2.043.783 2.826 0l4.294-4.294a1 1 0 0 0-1.414-1.414L12 14.586l-4.293-4.293z" fill="currentColor" stroke="none"></path></svg></button>
+                    </div>
+
+                    <ul class="sub-links">
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Полупромышленное оборудование</a></li>
+                <li><a href="#">VRV системы</a></li>
+                <li><a href="#">Системы вентиляции</a></li>
+                <li><a href="#">Бренды</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="mobile-menu__backdrop"></div>
+</div>
