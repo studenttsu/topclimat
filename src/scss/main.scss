@@ -240,23 +240,81 @@
 }
 
 .slider-main {
-    margin-bottom: 40px;
+    margin-bottom: 0 !important;
+    padding-top: 15px;
 
     &__item {
         overflow: hidden;
         border-radius: 15px;
-        flex: 0 0 auto;
-
-        &:not(:last-child) {
-            margin-right: 30px;
-        }
+        width: auto;
+        margin-right: 30px;
 
         & > a {
             display: block;
 
             img {
                 max-width: initial;
+                max-height: 300px;
+                display: block;
+                object-fit: cover;
+                object-position: center;
             }
+        }
+    }
+
+    .carousel__nav {
+        button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #fff;
+            box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.14);
+
+            svg {
+                width: 14px;
+                stroke: #949494;
+            }
+
+            &.is-prev {
+                left: -10px;
+
+                @include _768() {
+                    left: 20px;
+                }
+            }
+
+            &.is-next {
+                right: -10px;
+
+                @include _768() {
+                    right: 20px;
+                }
+            }
+        }
+    }
+
+    .carousel__slide {
+        padding: 0;
+    }
+
+    .carousel__dots {
+        top: auto;
+        bottom: 5px;
+    }
+
+    .carousel__dot {
+
+        &:after {
+            background-color: #ebebeb;
+            opacity: 1;
+            width: 10px;
+            height: 10px;
+        }
+    }
+
+    .carousel__dot.is-selected {
+        &:after {
+            background-color: $blue;
         }
     }
 }
