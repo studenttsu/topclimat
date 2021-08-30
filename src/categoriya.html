@@ -33,8 +33,8 @@
                         <p class="hero__subtitle">Подберите кондиционер в пару кликов <br>
                             исходя из планировки комнаты</p>
                         <div class="hero__actions">
-                            <button class="btn btn--white">Подобрать</button>
-                            <button class="btn btn--white btn--outline">Получить варианты</button>
+                            <button class="btn btn--white scroll-btn" data-query=".calc">Подобрать</button>
+                            <button class="btn btn--white btn--outline scroll-btn" data-query="#cases">Получить варианты</button>
                         </div>
                     </div>
                 </div>
@@ -107,7 +107,7 @@
 
             <include src="src/templates/sections/calc.html"></include>
 
-            <section class="section section--center">
+            <section id="cases" class="section section--center">
                 <div class="container">
                     <div class="section__header">
                         <h2 class="section__title">Популярные варианты</h2>
@@ -143,7 +143,7 @@
 
                                         <div class="popular-product__bottom">
                                             <div class="popular-product__price">7 990 ₽</div>
-                                            <button class="btn popular-product__action">Узнать о наличии</button>
+                                            <button class="btn popular-product__action" data-fancybox="dialog" data-src="#contains-dialog">Узнать о наличии</button>
                                         </div>
                                     </div>
                                 </div>
@@ -177,7 +177,7 @@
 
                                         <div class="popular-product__bottom">
                                             <div class="popular-product__price">7 990 ₽</div>
-                                            <button class="btn popular-product__action">Узнать о наличии</button>
+                                            <button class="btn popular-product__action" data-fancybox="dialog" data-src="#contains-dialog">Узнать о наличии</button>
                                         </div>
                                     </div>
                                 </div>
@@ -211,7 +211,7 @@
 
                                         <div class="popular-product__bottom">
                                             <div class="popular-product__price">7 990 ₽</div>
-                                            <button class="btn popular-product__action">Узнать о наличии</button>
+                                            <button class="btn popular-product__action" data-fancybox="dialog" data-src="#contains-dialog">Узнать о наличии</button>
                                         </div>
                                     </div>
                                 </div>
@@ -245,7 +245,7 @@
 
                                         <div class="popular-product__bottom">
                                             <div class="popular-product__price">7 990 ₽</div>
-                                            <button class="btn popular-product__action">Узнать о наличии</button>
+                                            <button class="btn popular-product__action" data-fancybox="dialog" data-src="#contains-dialog">Узнать о наличии</button>
                                         </div>
                                     </div>
                                 </div>
@@ -313,7 +313,7 @@
 
                                         <div class="popular-product__bottom">
                                             <div class="popular-product__price">7 990 ₽</div>
-                                            <button class="btn popular-product__action">Узнать о наличии</button>
+                                            <button class="btn popular-product__action" data-fancybox="dialog" data-src="#contains-dialog">Узнать о наличии</button>
                                         </div>
                                     </div>
                                 </div>
@@ -339,6 +339,7 @@
 
     <div class="hidden">
         <include src="src/templates/dialogs/order-dialog.html"></include>
+        <include src="src/templates/dialogs/contains-dialog.html"></include>
     </div>
 
     <script src="js/main.js"></script>

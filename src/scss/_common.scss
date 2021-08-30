@@ -361,6 +361,15 @@ img {
   outline-width: 0;
 }
 
+.map {
+  border-radius: 15px;
+  overflow: hidden;
+
+  iframe {
+    border: none;
+  }
+}
+
 .modal {
   padding: 60px 100px;
   border-radius: 5px;

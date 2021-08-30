@@ -1188,3 +1188,63 @@
         left: -50px;
     }
 }
+
+.contacts-main {
+    max-width: 430px;
+    margin: 0 auto 50px;
+}
+
+.main-phone {
+    background: $grey;
+    border-radius: 15px;
+    padding: 40px 10px;
+    text-align: center;
+    margin: 20px 0 40px;
+
+    a {
+        font-size: 21px;
+        color: $main-color;
+        margin-bottom: 20px;
+        display: inline-block;
+    }
+
+    p {
+        margin: 0;
+        font-size: 14px;
+    }
+}
+
+.contacts-requisites {
+    h3 {
+        font-size: 21px;
+        font-weight: normal;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
+
+.contacts-info {
+    list-style: none;
+    margin: 0 0 30px;
+    padding: 0;
+    font-size: 14px;
+
+    li:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+.socials {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+}
