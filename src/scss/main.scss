@@ -1107,6 +1107,73 @@
     }
 }
 
+.top-page {
+    margin-bottom: 100px;
+
+
+    .page-title {
+        margin-bottom: 20px;
+    }
+
+    &__action {
+        margin: 0 auto 50px;
+        display: block;
+        max-width: 230px;
+        width: 100%;
+        min-height: 53px;
+    }
+
+    &__img {
+        max-width: 630px;
+        display: block;
+        margin: auto;
+        width: 100%;
+    }
+
+    .features {
+        max-width: 830px;
+        margin: auto;
+    }
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin-top: -20px;
+
+    @include _768() {
+        flex-direction: column;
+        align-items: center;
+        margin-top: -40px;
+    }
+
+    .top-feature {
+        margin: 20px 20px 0;
+
+        @include _768() {
+            margin-top: 40px;
+        }
+    }
+}
+
+.top-feature {
+    text-align: center;
+
+    &__indicator {
+        color: $blue;
+        font-size: 25px;
+        font-weight: bold;
+        margin-bottom: 12px;
+    }
+
+    &__about {
+        font-size: 14px;
+        color: #6f6f6f;
+    }
+}
+
 .actual-price {
     padding: 35px 0;
     background-color: $grey;

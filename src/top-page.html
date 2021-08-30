@@ -27,13 +27,128 @@
                 </ul>
             </div>
 
-            <section>
+            <section class="top-page">
                 <div class="container">
-                    <h1>Daikin Emura</h1>
+                    <div class="page-title">
+                        <h1>Daikin Emura</h1>
+                        <p>Действительно красивые кондиционеры</p>
+                    </div>
+
+                    <div class="top-page__header">
+                        <button class="btn top-page__action scroll-btn" data-query="#price-form">Получить точную цену</button>
+                        <img class="top-page__img" src="img/assets/daikin_silver.png" alt="">
+
+                        <div class="features">
+                            <div class="top-feature">
+                                <div class="top-feature__indicator">A+++</div>
+                                <div class="top-feature__about">Класс сезонной <br>
+                                    энергоэффективности</div>
+                            </div>
+
+                            <div class="top-feature">
+                                <div class="top-feature__indicator">19 dB (A)</div>
+                                <div class="top-feature__about">Очень низкий <br>
+                                    уровень шума</div>
+                            </div>
+
+                            <div class="top-feature">
+                                <div class="top-feature__indicator">от -10 до +46 °C</div>
+                                <div class="top-feature__about">Широкий рабочий <br>
+                                     диапазон температур</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            <include src="src/templates/sections/actual-price.html"></include>7
+            <article class="article">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-10 offset-1">
+
+                            <section class="service-article">
+                                <div class="service-article__text">
+                                    <span class="section-name">Энергоэффективность</span>
+                                    <h2 class="service-article__title">Максимальная производительность</h2>
+                                    <p class="service-article__subtitle">Daikin Emura имеет потрясающе низкий уровень шума, а также лучшую энергоэффективность среди конкурентов, являясь самым экономичным кондиционером на российском рынке. 2 типа блоков FTXG/RXG и FTXJ/RXJ, работающие на разных типах фреона (хладагентах), являются образцом сочетания дизайна и передовых технологий.</p>
+                                </div>
+
+                                <img src="img/assets/img23.jpg" alt="">
+                            </section>
+
+                            <section class="service-article">
+                                <div class="service-article__text">
+                                    <span class="section-name">Комфорт</span>
+                                    <h2 class="service-article__title">Интеллектуальный 2-х зонный датчик</h2>
+                                    <p class="service-article__subtitle">Кондиционер оснащен датчиком движения Intelligent Eye, который экономит электроэнергию приблизительно на 80%. Если в течение 20 минут в помещении отсутствуют люди, система перейдет в режим ожидания. Кроме этого, датчик также фиксирует, в какой именно части помещения находятся люди, и не будет направлять в их сторону поток холодного воздуха.</p>
+                                </div>
+
+                                <img src="img/assets/img25.jpg" alt="">
+                            </section>
+
+                            <section class="service-article">
+                                <div class="service-article__text">
+                                    <span class="section-name">Особенности</span>
+                                    <h2 class="service-article__title">Комфортная атмосфера в любое время</h2>
+
+                                    <div class="service-steps">
+                                        <div>
+                                            <div class="service-steps__title">Фильтрация воздуха</div>
+                                            <p class="service-steps__descr">Уникальный титано-апатитовый дезодорирующий фильтр удаляет содержащиеся в воздухе частицы пыли и неприятные запахи, бактерии, вирусы</p>
+                                        </div>
+
+                                        <div>
+                                            <div class="service-steps__title">Комфортный сон</div>
+                                            <p class="service-steps__descr">Благодаря специально разработанной программе, ваш кондиционер будет создавать идеальные условия для комфортного сна, регулируя температуру специальным образом.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <section class="section" id="price-form">
+                <div class="actual-price">
+                    <div class="container">
+                        <div class="row">
+                            <div class="actual-price__card col-md-6 offset-md-3 col-sm-12 col-12">
+
+                                <div class="actual-price__top">
+                                    <div class="actual-price__title">Получите актуальную цену</div>
+                                    <div class="actual-price__info">Вы получите ответ сегодня</div>
+                                </div>
+
+                                <form class="order-form">
+                                    <div class="form-item">
+                                        <label>Ваше имя</label>
+                                        <input type="text" required class="form-control">
+                                    </div>
+
+                                    <div class="form-item">
+                                        <label>Ваш телефон</label>
+                                        <input type="text" type="tel" pattern="+7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" required class="phone-field form-control">
+                                    </div>
+
+                                    <div class="form-item">
+                                        <button class="btn btn--bold" type="submit">Получить</button>
+                                    </div>
+
+                                    <div class="form-item">
+                                        <label class="checkbox policy-checkbox">
+                                            <input type="checkbox" required checked>
+                                            <span>Я принимаю условия <a href="#" target="_blank">обработки
+    персональных данных</a></span>
+                                        </label>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <include src="src/templates/sections/exclusive-products.html"></include>
 
