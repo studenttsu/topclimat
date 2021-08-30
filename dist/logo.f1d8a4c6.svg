@@ -1,0 +1,32 @@
+<svg id="лого" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="59" viewBox="0 0 100 59">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 30px;
+      }
+
+      .cls-1, .cls-3 {
+        font-family: GothamPro;
+        font-weight: 700;
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-3 {
+        font-size: 15px;
+        fill: #fff;
+        text-anchor: middle;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="3.835" y1="59" x2="96.165" y2="29" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0b42b6"/>
+      <stop offset="1" stop-color="#346fee"/>
+    </linearGradient>
+  </defs>
+  <image id="cloudy-day" width="25" height="23" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAXCAYAAAD+4+QTAAABu0lEQVRIibXVS6hNcRTH8c/1qJtHwsg1MFGS1wBFGSg3AyQmEhMphG4mMvS4hhIhKeWWkWQiKVIYeWSgW1JmRmSiFJl4tWrt2z67c/Z5+k32bv3XWt+9/uu//nto3Ymv+tBjzMOGuhQz+iFgaydO0zpMtgfnmtgf4VUT+xkc7hayDKfxpFL9KRyr+N7BWazvFnIetzCKX9iLt3iafXmPI+kbVd/HoSK4l8bfKCWs6i724XfZ3mklhUZrALKK/VVjN5DpuNeB38V+ILEFPzrwm40VeI7oxet2kCXYlEGhxbjeJmYIf/Ed3+LZahgX4iZ2ZVDoJQ7geNqOtoj9madtR2FoVskCTGJ3CRDaiA9Ym7MxjBGM4XPJb6yasBnkUm5LK01gEZZmn64lLL7+WQ5jW8jOGkBoFT7hHb5kYtm3LTmsD+ogcX3MaQOpanNur2z4RPbjduFXND5Kv5y3ai8382qsSdhBfMxqpyAjuTirh+RlLS9VNF5eiO26MgCAnJ+HWFldCMj2AQBC87ENb/K9ATJzQJBCw9mXBshkbUhvapizgJz8D5CG2zpOVwxT/AMuYG6fyf/gKl5MWfAPepFMXBTSnJMAAAAASUVORK5CYII="/>
+  <text id="TOP" class="cls-1" x="33.377" y="23.44">TOP</text>
+  <rect id="Rounded_Rectangle_2" data-name="Rounded Rectangle 2" class="cls-2" y="29" width="100" height="30" rx="3" ry="3"/>
+  <text id="climate" class="cls-3" x="50.127" y="50.43"><tspan x="50.127">climate</tspan></text>
+</svg>
