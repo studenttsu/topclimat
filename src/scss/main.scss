@@ -451,6 +451,10 @@
     font-size: 12px;
     margin-bottom: 15px;
 
+    @include _768() {
+        margin-top: 20px;
+    }
+
     li {
         display: flex;
         align-items: center;
@@ -480,6 +484,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    display: flex;
+    align-items: center;
 
     &--white {
         color: #fff;
@@ -490,7 +496,6 @@
 
         @include _768() {
             padding: 0;
-            margin-bottom: 60px;
             text-align: center;
         }
     }
@@ -523,8 +528,17 @@
             min-width: 165px;
             min-height: 50px;
 
+            @include _480() {
+                width: 100%;
+            }
+
             &:not(:last-child) {
                 margin-right: 12px;
+
+                @include _480() {
+                    margin-right: 0;
+                    margin-bottom: 15px;
+                }
             }
         }
     }
@@ -538,6 +552,12 @@
 
 .hero-brands {
     background-color: #e3eaff;
+
+    @include _768() {
+        .row > div:first-child {
+            margin-bottom: 60px;
+        }
+    }
 }
 
 .section-about {
@@ -805,6 +825,10 @@
         margin: 0;
         font-size: 36px;
         font-weight: bold;
+
+        @include _480() {
+            font-size: 32px;
+        }
     }
 
     p {
@@ -1102,5 +1126,65 @@
                 }
             }
         }
+    }
+}
+
+.actual-price {
+    &__top {
+        text-align: center;
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+    }
+
+    &__card {
+        background: #fff;
+        border-radius: 10px;
+        padding: 50px 100px;
+        width: 100%;
+        max-width: 570px;
+        min-height: 555px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        @include _768() {
+            max-width: 100%;
+            padding: 50px;
+        }
+
+        @include _480() {
+            padding: 50px 30px;
+        }
+    }
+
+    &__title {
+        font-size: 28px;
+        font-weight: 400;
+        margin-bottom: 15px;
+    }
+
+    &__info {
+        font-size: 14px;
+    }
+
+    form {
+        width: 100%;
+    }
+}
+
+.thanks {
+    h1 {
+        font-size: 36px;
+    }
+
+    p {
+        font-size: 18px;
+        font-weight: 400;
+        margin-bottom: 60px;
+    }
+
+    img {
+        position: relative;
+        left: -50px;
     }
 }

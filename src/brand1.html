@@ -36,8 +36,8 @@
                                 <p class="hero__subtitle">Подберите кондиционер в пару кликов <br>
                                     исходя из планировки комнаты</p>
                                 <div class="hero__actions">
-                                    <button class="btn">Подобрать</button>
-                                    <button class="btn btn--outline">Получить варианты</button>
+                                    <button class="btn scroll-btn" data-query=".calc">Подобрать</button>
+                                    <button class="btn btn--outline scroll-btn" data-query="#cases">Получить варианты</button>
                                 </div>
                             </div>
                         </div>
@@ -53,7 +53,7 @@
 
             <include src="src/templates/sections/achievements.html"></include>
 
-            <section class="section section--center">
+            <section id="cases" class="section section--center">
                 <div class="container">
                     <div class="section__header">
                         <h2 class="section__title">Серии</h2>
@@ -67,7 +67,7 @@
                                     <div class="col-lg-6 col-md-7 series-card__inner">
                                         <div class="series-card__title">Настенные кондиционеры MSZ-LN</div>
                                         <p class="series-card__descr">Серия PREMIUM INVERTER (MSZ-LN) формирует высший, премиальный сегмент на рынке климатической техники. В этой модели сочетаются и изящный внешний вид, разнообразная цветовая палитра и высочайшие технические характеристики. Серия “Премиум инвертор” имеет максимальный набор функций и возможностей: плазменная очистка воздуха, инновационная функция 3D I-SEE, система независимых воздушных жалюзи, уникальное гибридное покрытие для защиты от грязи и пыли, встроенный Wi-Fi.</p>
-                                        <button class="btn series-card__btn">Получить прайс-лист</button>
+                                        <button class="btn series-card__btn" data-fancybox="dialog" data-src="#price-dialog">Получить прайс-лист</button>
                                     </div>
                                 </div>
                             </div>
@@ -78,7 +78,7 @@
                                     <div class="col-lg-6 col-md-7 series-card__inner">
                                         <div class="series-card__title">Настенные кондиционеры MSZ-LN</div>
                                         <p class="series-card__descr">Серия PREMIUM INVERTER (MSZ-LN) формирует высший, премиальный сегмент на рынке климатической техники. В этой модели сочетаются и изящный внешний вид, разнообразная цветовая палитра и высочайшие технические характеристики. Серия “Премиум инвертор” имеет максимальный набор функций и возможностей: плазменная очистка воздуха, инновационная функция 3D I-SEE, система независимых воздушных жалюзи, уникальное гибридное покрытие для защиты от грязи и пыли, встроенный Wi-Fi.</p>
-                                        <button class="btn series-card__btn">Получить прайс-лист</button>
+                                        <button class="btn series-card__btn" data-fancybox="dialog" data-src="#order-dialog">Получить прайс-лист</button>
                                     </div>
                                 </div>
                             </div>
@@ -89,7 +89,7 @@
                                     <div class="col-lg-6 col-md-7 series-card__inner">
                                         <div class="series-card__title">Настенные кондиционеры MSZ-LN</div>
                                         <p class="series-card__descr">Серия PREMIUM INVERTER (MSZ-LN) формирует высший, премиальный сегмент на рынке климатической техники. В этой модели сочетаются и изящный внешний вид, разнообразная цветовая палитра и высочайшие технические характеристики. Серия “Премиум инвертор” имеет максимальный набор функций и возможностей: плазменная очистка воздуха, инновационная функция 3D I-SEE, система независимых воздушных жалюзи, уникальное гибридное покрытие для защиты от грязи и пыли, встроенный Wi-Fi.</p>
-                                        <button class="btn series-card__btn">Получить прайс-лист</button>
+                                        <button class="btn series-card__btn" data-fancybox="dialog" data-src="#order-dialog">Получить прайс-лист</button>
                                     </div>
                                 </div>
                             </div>
@@ -134,6 +134,7 @@
 
     <div class="hidden">
         <include src="src/templates/dialogs/order-dialog.html"></include>
+        <include src="src/templates/dialogs/price-dialog.html"></include>
     </div>
 
     <script src="js/main.js"></script>

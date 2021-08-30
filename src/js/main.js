@@ -2,13 +2,17 @@ import { Fancybox, Carousel } from "@fancyapps/ui";
 import $ from 'jquery';
 
 document.addEventListener('DOMContentLoaded', function(){
-    const logoCarousel = new Carousel(document.querySelector(".slider-main"), {
-        friction: 0.83,
-        Dots: true,
-        slidesPerPage: 1,
-        center: false,
-        fill: true
-    });
+    const sliderEl = document.querySelector(".slider-main");
+
+    if (sliderEl) {
+        const logoCarousel = new Carousel(document.querySelector(".slider-main"), {
+            friction: 0.83,
+            Dots: true,
+            slidesPerPage: 1,
+            center: false,
+            fill: true
+        });
+    }
 
     $('.categories-links li.with-secondary')
         .on('mouseenter', function () { toggleSubLinks($(this, true)) })
@@ -33,6 +37,14 @@ document.addEventListener('DOMContentLoaded', function(){
         $(this).toggleClass('active');
         $(this).closest('li').toggleClass('active');
         $(this).closest('li').find('.sub-links').slideToggle('opened');
+    });
+
+    $('.scroll-btn').click(function (e) {
+        e.preventDefault();
+
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $($(this).data('query')).offset().top
+        }, 1000);
     });
 
     $('.calc-form .next-step').click(function () {
