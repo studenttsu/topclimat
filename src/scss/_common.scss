@@ -344,6 +344,23 @@ img {
   }
 }
 
+figure {
+  margin: 35px 0;
+
+  iframe {
+    border-radius: 15px;
+    overflow: hidden;
+  }
+
+  figcaption {
+    padding-top: 25px;
+    font-size: 14px;
+    text-align: center;
+    max-width: 570px;
+    margin: auto;
+  }
+}
+
 .responsive-video {
   position: relative;
   padding-bottom: 56.25%; /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
