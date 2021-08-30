@@ -895,11 +895,6 @@
     color: $blue;
 }
 
-.actual-price {
-    padding: 35px 0;
-    background-color: $grey;
-}
-
 .delivery {
     text-align: center;
 
@@ -1113,6 +1108,9 @@
 }
 
 .actual-price {
+    padding: 35px 0;
+    background-color: $grey;
+
     &__top {
         text-align: center;
         margin-bottom: 25px;
@@ -1122,10 +1120,9 @@
     &__card {
         background: #fff;
         border-radius: 10px;
-        padding: 50px 100px;
+        padding: 50px 70px 60px;
         width: 100%;
         max-width: 570px;
-        min-height: 555px;
         display: flex;
         align-items: center;
         flex-direction: column;
