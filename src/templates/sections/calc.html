@@ -10,31 +10,124 @@
       </div>
 
       <form class="calc-form">
-        <div class="form-item">
-          <label>Площадь помещения</label>
-          <input type="text" class="form-control" placeholder="Не указано">
-        </div>
+        <div class="step active" data-id="step1">
+          <div class="calc-form__controls">
+            <div class="rooms">
+              <ul>
+                <li class="active" data-id="room1">Комната 1 <button></button></li>
+              </ul>
+            </div>
 
-        <div class="form-item">
-          <label>Тип помещения</label>
-          <input type="text" class="form-control" placeholder="Выберите тип">
-        </div>
+            <div class="rooms-wrap">
+              <div class="rooms-controls active" data-id="room1">
+                <div class="form-item">
+                  <label>Площадь помещения, м2</label>
+                  <input name="square" type="number" class="form-control" placeholder="Не указано">
+                </div>
 
-        <div class="d-flex">
-          <div class="form-item">
-            <label>Сторона дома</label>
-            <input type="text" class="form-control" placeholder="Выберите тип">
+                <div class="form-item">
+                  <label>Тип помещения</label>
+
+                  <select name="room-type" class="select form-control">
+                    <option>Выберите тип</option>
+                    <option value="Спальня">Спальня</option>
+                    <option value="Гостинная">Гостинная</option>
+                    <option value="Кухня">Кухня</option>
+                    <option value="Детская">Детская</option>
+                  </select>
+                </div>
+
+                <div class="two-controls">
+                  <div class="form-item">
+                    <label>Сторона дома</label>
+
+                    <select name="house-side" class="select form-control">
+                      <option>Выберите тип</option>
+                      <option value="Теневая">Теневая</option>
+                      <option value="Солнечная">Солнечная</option>
+                    </select>
+                  </div>
+
+                  <div class="form-item">
+                    <label>Окна</label>
+
+                    <select name="windows" class="select form-control">
+                      <option>Выберите тип</option>
+                      <option value="Стандартные">Стандартные</option>
+                      <option value="Панорамные">Панорамные</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div class="form-item">
-            <label>Окна</label>
-            <input type="text" class="form-control" placeholder="Выберите тип">
+          <div class="calc-form__actions">
+            <button class="btn btn--outline append-room" type="button">Добавить комнату</button>
+            <button class="btn next-step" data-id="step2" type="button">Продолжить</button>
           </div>
         </div>
 
-        <div class="d-flex">
-          <button class="btn">Добавить комнату</button>
-          <button class="btn">Продолжить</button>
+        <div class="step" data-id="step2">
+          <div class="calc-form__controls">
+            <div class="form-item">
+              <label>Тип кондиционера</label>
+
+              <select name="air-type" class="select form-control">
+                <option>Выберите тип</option>
+                <option value="Опция 1">Опция 1</option>
+                <option value="Опция 1">Опция 1</option>
+                <option value="Опция 1">Опция 1</option>
+                <option value="Опция 1">Опция 1</option>
+              </select>
+            </div>
+
+            <div class="form-item">
+              <label>Тип помещения</label>
+
+              <select name="price-range" class="select form-control">
+                <option>Выберите тип</option>
+                <option value="Опция 1">Опция 1</option>
+                <option value="Опция 1">Опция 1</option>
+                <option value="Опция 1">Опция 1</option>
+                <option value="Опция 1">Опция 1</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="calc-form__actions">
+            <button class="btn btn--outline next-step" type="button" data-id="step1">Назад</button>
+            <button class="btn next-step" data-id="step3" type="button">Далее</button>
+          </div>
+        </div>
+
+        <div class="step" data-id="step3">
+          <div class="calc-form__controls">
+            <div class="order-form">
+              <div class="form-item">
+                <label>Ваше имя</label>
+                <input type="text" required class="form-control">
+              </div>
+
+              <div class="form-item">
+                <label>Ваш телефон</label>
+                <input type="text" type="tel" pattern="+7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" required class="phone-field form-control">
+              </div>
+
+              <div class="form-item">
+                <label class="checkbox policy-checkbox">
+                  <input type="checkbox" required checked>
+                  <span>Я принимаю условия <a href="#" target="_blank">обработки
+      персональных данных</a></span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="calc-form__actions" style="margin-top: 20px">
+            <button class="btn btn--outline next-step" type="button" data-id="step2">Назад</button>
+            <button class="btn" type="button">Отправить</button>
+          </div>
         </div>
       </form>
     </div>

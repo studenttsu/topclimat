@@ -2,6 +2,7 @@
 @import "../../node_modules/bootstrap/dist/css/bootstrap-grid.css";
 @import "../../node_modules/@fancyapps/ui/dist/fancybox.css";
 @import "../../node_modules/@fancyapps/ui/dist/carousel.css";
+@import "../../node_modules/select2/dist/css/select2.min.css";
 
 @import "vars";
 @import "mixins";
@@ -372,29 +373,61 @@
     min-height: 660px;
     padding: 45px 0 50px;
     margin: 35px 0 40px;
+    position: relative;
+
+    @include _480() {
+        padding-top: 300px;
+        background: $grey;
+
+        &:before {
+            content: '';
+            height: 300px;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 20px;
+            background: url('../img/calc-bg.jpg') no-repeat top left -80px;
+            background-size: cover;
+        }
+    }
 
     .container {
         display: flex;
         justify-content: flex-end;
+        position: relative;
+        z-index: 1;
     }
 
     &__top {
         margin-bottom: 25px;
         padding-top: 10px;
+        width: 100%;
+
+        @include _480() {
+            text-align: center;
+        }
     }
 
     &__card {
         background: #fff;
         border-radius: 10px;
         padding: 30px;
-        max-width: 500px;
         width: 100%;
+        max-width: 500px;
+        min-height: 555px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
     }
 
     &__title {
         font-size: 28px;
         font-weight: 400;
         margin-bottom: 15px;
+    }
+
+    &__info {
+        font-size: 14px;
     }
 }
 
@@ -938,5 +971,136 @@
 
     &__subtitle {
         font-size: 14px;
+    }
+}
+
+.calc-form {
+    width: 100%;
+    flex: 1;
+
+    .rooms {
+        margin-bottom: 30px;
+
+        ul {
+            list-style: none;
+            margin: 0 0 20px;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        li {
+            font-size: 14px;
+            padding: 0 10px 15px;
+            border-bottom: 2px solid transparent;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+
+            &:only-child button {
+                display: none !important;
+            }
+
+            &.active {
+                border-color: $blue;
+                color: $blue;
+
+                button {
+                    display: inline-flex;
+                }
+            }
+        }
+
+        button {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: url('../img/tab-close.png') no-repeat center;
+            border: none;
+            padding: 0;
+            margin-left: 10px;
+            cursor: pointer;
+            display: none;
+        }
+    }
+
+    .rooms-controls {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    .step {
+        display: none;
+
+        &.active {
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+        }
+    }
+
+    &__controls {
+        flex: 1;
+    }
+
+    .two-controls {
+        display: flex;
+
+        @include _480() {
+            display: block;
+        }
+
+        & > div {
+            flex: 1;
+
+            &:first-child + div {
+                margin-left: 20px;
+
+                @include _480() {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
+    &__actions {
+        display: flex;
+        margin-top: 20px;
+
+        @include _480() {
+            flex-direction: column;
+        }
+
+        .btn {
+            flex: 1;
+            font-weight: bold;
+
+            &:first-child + .btn {
+                margin-left: 20px;
+
+                @include _480() {
+                    margin-left: 0;
+                    margin-top: 20px;
+                }
+            }
+
+            &--outline {
+                color: #949494;
+                border: 1px solid #ebebeb;
+
+                &:hover {
+                    background: transparent;
+                    border: 1px solid $blue;
+                    color: $blue;
+                }
+            }
+        }
     }
 }
