@@ -10,6 +10,11 @@
 @import "header";
 @import "footer";
 
+body.menu-opened {
+    height: 100vh;
+    overflow: hidden;
+}
+
 .cards-wrapper {
     margin-top: -20px;
 
@@ -44,14 +49,28 @@
         @include _768() {
             font-size: 18px;
             padding-top: 30px;
+            padding-left: 20px;
         }
     }
 
     &__img {
         margin-top: auto;
         flex-shrink: 0;
-        background: right 50%/contain no-repeat;
+        background: right 50%/contain no-repeat right bottom;
         flex-grow: 1;
+    }
+}
+
+.last-news {
+    @include _480() {
+        .section__header {
+            flex-direction: column;
+            align-items: flex-start !important;
+
+            .section__title {
+                margin-bottom: 14px;
+            }
+        }
     }
 }
 
@@ -59,6 +78,10 @@
     font-size: 18px;
     display: inline-flex;
     align-items: center;
+
+    @include _480() {
+        font-size: 14px;
+    }
 
     &:after {
         content: '';
@@ -224,7 +247,7 @@
     }
 
     &__descr {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     @include _768() {
@@ -241,7 +264,6 @@
 }
 
 .slider-main {
-    margin-bottom: 0 !important;
     padding-top: 15px;
 
     &__item {
@@ -259,6 +281,10 @@
                 display: block;
                 object-fit: cover;
                 object-position: center;
+
+                @include _768() {
+                    width: 100%;
+                }
             }
         }
     }
@@ -270,6 +296,11 @@
             border-radius: 50%;
             background-color: #fff;
             box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.14);
+
+            @include _480() {
+                width: 40px;
+                height: 40px;
+            }
 
             svg {
                 width: 14px;
@@ -296,11 +327,6 @@
 
     .carousel__slide {
         padding: 0;
-    }
-
-    .carousel__dots {
-        top: auto;
-        bottom: 5px;
     }
 
     .carousel__dot {
@@ -355,6 +381,10 @@
     &__name {
         font-size: 16px;
         padding: 20px 22px 0;
+
+        @include _480() {
+            font-size: 14px;
+        }
     }
 
     &__img {
@@ -487,8 +517,32 @@
     display: flex;
     align-items: center;
 
+    &.hero-service {
+        display: block;
+
+        @include _768() {
+            padding: 0;
+            background: #fff !important;
+
+            .container {
+                padding: 45px 15px;
+            }
+        }
+    }
+
     &--white {
         color: #fff;
+    }
+
+    &__mobile-img {
+        display: none;
+        height: 300px;
+        background-size: cover;
+        background-position: right bottom;
+
+        @include _768() {
+            display: block;
+        }
     }
 
     &__inner {
@@ -504,11 +558,27 @@
         font-size: 36px;
         font-weight: bold;
         margin: 0 0 30px;
+
+        @include _480() {
+            font-size: 32px;
+
+            br {
+                display: none;
+            }
+        }
     }
 
     &__subtitle {
         font-size: 18px;
         margin: 0;
+
+        @include _480() {
+            font-size: 16px;
+
+            br {
+                display: none;
+            }
+        }
     }
 
     &__subtitle + &__actions {
@@ -851,34 +921,46 @@
 }
 
 .service-article {
-    &__text {
-        max-width: 770px;
-        margin: auto;
-        text-align: center;
-    }
+    section {
+        &:not(:last-of-type) {
+            margin-bottom: 60px;
+        }
 
-    &__title {
-        font-size: 36px;
-        font-weight: bold;
-        margin: 25px 0 30px;
-    }
+        header {
+            text-align: center;
+            max-width: 770px;
+            margin: auto;
 
-    &:not(:last-of-type) {
-        margin-bottom: 60px;
-    }
+            & > span {
+                font-size: 20px;
+                color: $blue;
+            }
+        }
 
-    img {
-        margin: 35px 0;
-    }
+        h2, h3 {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 25px 0 30px;
+        }
 
-    ul {
-        margin: 30px auto;
-        max-width: 450px;
-        text-align: left;
+        img {
+            margin: 35px 0;
+        }
+
+        ul {
+            @extend .list;
+            margin: 30px auto;
+            max-width: 450px;
+            text-align: left;
+        }
     }
 }
 
 .service-steps {
+    text-align: center;
+    max-width: 770px;
+    margin: auto;
+
     & > div:not(:last-child) {
         margin-bottom: 30px;
     }
@@ -974,6 +1056,13 @@
     &__subtitle {
         font-size: 14px;
     }
+
+    .carousel__button:hover {
+        svg {
+            stroke: $main-color;
+            transition: .3s stroke;
+        }
+    }
 }
 
 .calc-form {
@@ -993,14 +1082,14 @@
 
         li {
             font-size: 14px;
-            padding: 0 10px 15px;
+            padding: 0 5px 15px;
             border-bottom: 2px solid transparent;
             display: flex;
             align-items: center;
             cursor: pointer;
 
             &:not(:last-child) {
-                margin-right: 20px;
+                margin-right: 10px;
             }
 
             &:only-child button {
@@ -1241,6 +1330,14 @@
     margin: 0 auto 50px;
 }
 
+.contacts-map {
+    @include _768() {
+        div:last-child {
+            order: -1 !important;
+        }
+    }
+}
+
 .main-phone {
     background: $grey;
     border-radius: 15px;
@@ -1290,6 +1387,19 @@
     justify-content: center;
 
     a {
+        display: flex;
+        border-radius: 50%;
+        background: $blue;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        width: 40px;
+        transition: 0.25s background-color ease, 0.25s color ease, 0.25s border-color ease;
+
+        &:hover {
+            background-color: darken($blue, 8%);
+        }
+
         &:not(:last-child) {
             margin-right: 20px;
         }

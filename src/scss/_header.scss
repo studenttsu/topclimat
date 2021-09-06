@@ -290,6 +290,8 @@
     align-items: center;
     justify-content: flex-end;
     padding: 0 20px;
+    position: sticky;
+    top: 0;
   }
 
   &__list {
@@ -331,8 +333,9 @@
 
       a {
         color: $main-color;
-        display: inline-flex;
+        display: block;
         padding: 11px 0;
+        flex: 1;
       }
     }
 

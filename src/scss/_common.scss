@@ -108,6 +108,7 @@ img {
   display: inline-block;
   font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
+  appearance: none;
 
   &:hover {
     background-color: darken($blue, 6%);
@@ -204,6 +205,12 @@ img {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+@include _480() {
+  select.form-control {
+    appearance: none;
+  }
 }
 
 .form-control {
@@ -313,6 +320,10 @@ img {
   }
 }
 
+.form-control.error, .checkbox input.error + span:before {
+  border-color: red;
+}
+
 .text-center {
   text-align: center;
 }
@@ -413,4 +424,47 @@ figure {
   svg {
     filter: none;
   }
+}
+
+.intl-tel-input {
+  width: 100%;
+}
+
+.intl-tel-input.iti-container {
+  z-index: 99999;
+  width: 85%;
+}
+
+.intl-tel-input .selected-dial-code {
+  display: none !important;
+}
+
+.intl-tel-input .selected-flag {
+  display: flex !important;
+  align-items: center;
+  width: initial !important;
+  padding-left: 15px !important;
+}
+
+.intl-tel-input + .floating-input__label {
+  left: 55px;
+}
+
+.intl-tel-input .selected-flag .iti-flag {
+  margin-right: 8px;
+}
+
+.intl-tel-input .selected-flag .iti-flag,
+.intl-tel-input .selected-flag .iti-arrow {
+  position: static;
+}
+
+.intl-tel-input.allow-dropdown .flag-container:hover .selected-flag,
+.intl-tel-input.separate-dial-code .selected-flag {
+  background: none;
+  outline: 0;
+}
+
+.intl-tel-input .form-control.phone-input {
+  padding-left: 70px !important;
 }

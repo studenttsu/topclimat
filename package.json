@@ -16,9 +16,12 @@
     "sass": "^1.37.5"
   },
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "@fancyapps/ui": "^4.0.0-beta.1",
     "bootstrap": "^5.1.0",
+    "inputmask": "^5.0.6",
     "jquery": "^3.6.0",
+    "jquery-validation": "^1.19.3",
     "normalize.css": "^8.0.1",
     "select2": "^4.1.0-rc.0"
   }

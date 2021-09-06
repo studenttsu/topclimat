@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/10.0.2/css/intlTelInput.css" />
     <link rel="stylesheet" href="./scss/main.scss">
 </head>
 
@@ -27,7 +28,9 @@
                 </ul>
             </div>
 
-            <section class="hero" style="background-image: url('img/assets/hero-bg2.jpg')">
+            <section class="hero hero-service" style="background-image: url('img/assets/hero-bg2.jpg')">
+                <div class="hero__mobile-img" style="background-image: url('img/assets/hero-bg2.jpg')"></div>
+
                 <div class="container">
                     <div class="hero__inner">
                         <h1 class="hero__title">Монтаж кондиционеров <br>для любых помещений</h1>
@@ -40,82 +43,85 @@
                 </div>
             </section>
 
-            <article class="article">
+            <article class="article service-article">
                 <div class="container">
                     <div class="row">
                         <div class="col-10 offset-1">
 
-                            <section class="service-article">
-                                <div class="service-article__text">
-                                    <span class="section-name">Виды монтажа</span>
-                                    <h2 class="service-article__title">Мы предлагаем стандартный
+                            <section>
+                                <header>
+                                    <span>Виды монтажа</span>
+                                    <h2>Мы предлагаем стандартный
                                         и нестандартный монтаж кондиционера</h2>
-                                    <p class="service-article__subtitle">От чего в первую очередь зависит срок службы кондиционера? От качества его монтажа! Если самый дорогой кондиционер смонтировать плохо - он долго не прослужит. И наоборот, если качественно поставить самую дешевую китайскую сплит-систему, она проработает долгие годы. Поэтому нельзя отдавать монтаж кондиционера на откуп не профессионалам.</p>
-                                </div>
+                                    <p>От чего в первую очередь зависит срок службы кондиционера? От качества его монтажа! Если самый дорогой кондиционер смонтировать плохо - он долго не прослужит. И наоборот, если качественно поставить самую дешевую китайскую сплит-систему, она проработает долгие годы. Поэтому нельзя отдавать монтаж кондиционера на откуп не профессионалам.</p>
+                                </header>
+
 
                                 <img src="img/assets/img21.jpg" alt="">
                             </section>
 
-                            <section class="service-article">
-                                <div class="service-article__text">
-                                    <span class="section-name">Стандарт</span>
-                                    <h2 class="service-article__title">Что входит в стандартный монтаж?</h2>
-                                    <ul class="list">
-                                        <li>Монтаж наружного блока под окно</li>
-                                        <li>Монтаж внутреннего блока</li>
-                                        <li>Пробивка 1 отверстия под коммуникации (диаметром не более 4 см)</li>
-                                        <li>Прокладка фреоновой трассы между блоками (до 5 м)</li>
-                                        <li>Вывод дренажного шланга к наружному блоку (до 5 м)</li>
-                                        <li>Подключение питания к кондиционеру (до 3 м)</li>
-                                        <li>Подключение межблочного кабеля (до 6 м)</li>
-                                        <li>Демонстрация функций кондиционера заказчик</li>
-                                    </ul>
-                                </div>
+                            <section>
+                                <header>
+                                    <span>Стандарт</span>
+                                    <h2>Что входит в стандартный монтаж?</h2>
+                                </header>
+
+                                <ul>
+                                    <li>Монтаж наружного блока под окно</li>
+                                    <li>Монтаж внутреннего блока</li>
+                                    <li>Пробивка 1 отверстия под коммуникации (диаметром не более 4 см)</li>
+                                    <li>Прокладка фреоновой трассы между блоками (до 5 м)</li>
+                                    <li>Вывод дренажного шланга к наружному блоку (до 5 м)</li>
+                                    <li>Подключение питания к кондиционеру (до 3 м)</li>
+                                    <li>Подключение межблочного кабеля (до 6 м)</li>
+                                    <li>Демонстрация функций кондиционера заказчик</li>
+                                </ul>
 
                                 <img src="img/assets/img21.jpg" alt="">
                             </section>
 
-                            <section class="service-article">
-                                <div class="service-article__text">
-                                    <span class="section-name">Нестандарт</span>
-                                    <h2 class="service-article__title">Что входит в нестандартный монтаж?</h2>
+                            <section>
+                                <header>
+                                    <span>Нестандарт</span>
+                                    <h2>Что входит в нестандартный монтаж?</h2>
                                     <p>Нестандартный монтаж отличается от стандартного появлением
                                         дополнительных работ в зависимости от сложности объекта</p>
-                                    <ul class="list">
-                                        <li>Монтаж наружного блока под окно</li>
-                                        <li>Монтаж внутреннего блока</li>
-                                        <li>Пробивка 1 отверстия под коммуникации (диаметром не более 4 см)</li>
-                                        <li>Прокладка фреоновой трассы между блоками (до 5 м)</li>
-                                        <li>Вывод дренажного шланга к наружному блоку (до 5 м)</li>
-                                        <li>Подключение питания к кондиционеру (до 3 м)</li>
-                                        <li>Подключение межблочного кабеля (до 6 м)</li>
-                                        <li>Демонстрация функций кондиционера заказчик</li>
-                                    </ul>
-                                </div>
+                                </header>
+
+                                <ul>
+                                    <li>Монтаж наружного блока под окно</li>
+                                    <li>Монтаж внутреннего блока</li>
+                                    <li>Пробивка 1 отверстия под коммуникации (диаметром не более 4 см)</li>
+                                    <li>Прокладка фреоновой трассы между блоками (до 5 м)</li>
+                                    <li>Вывод дренажного шланга к наружному блоку (до 5 м)</li>
+                                    <li>Подключение питания к кондиционеру (до 3 м)</li>
+                                    <li>Подключение межблочного кабеля (до 6 м)</li>
+                                    <li>Демонстрация функций кондиционера заказчик</li>
+                                </ul>
 
                                 <img src="img/assets/img21.jpg" alt="">
                             </section>
 
-                            <section class="service-article">
-                                <div class="service-article__text">
-                                    <span class="section-name">Особенности</span>
-                                    <h2 class="service-article__title">Этапы монтажа</h2>
+                            <section>
+                                <header>
+                                    <span>Особенности</span>
+                                    <h2>Этапы монтажа</h2>
+                                </header>
 
-                                    <div class="service-steps">
-                                        <div>
-                                            <div class="service-steps__title">Отправляете заявку</div>
-                                            <p class="service-steps__descr">Нужно заполнить форму под этим блоком</p>
-                                        </div>
+                                <div class="service-steps">
+                                    <div>
+                                        <div class="service-steps__title">Отправляете заявку</div>
+                                        <p class="service-steps__descr">Нужно заполнить форму под этим блоком</p>
+                                    </div>
 
-                                        <div>
-                                            <div class="service-steps__title">Выполняем и сдаём работы</div>
-                                            <p class="service-steps__descr">Наши специалисты приезжают и монтируют оборудование точно в оговоренное время</p>
-                                        </div>
+                                    <div>
+                                        <div class="service-steps__title">Выполняем и сдаём работы</div>
+                                        <p class="service-steps__descr">Наши специалисты приезжают и монтируют оборудование точно в оговоренное время</p>
+                                    </div>
 
-                                        <div>
-                                            <div class="service-steps__title">Оказываем гарантийное сопровождение</div>
-                                            <p class="service-steps__descr">Специалисты компании Smart Optima оказывают любые услуги по ремонту оборудования на время действия гарантии</p>
-                                        </div>
+                                    <div>
+                                        <div class="service-steps__title">Оказываем гарантийное сопровождение</div>
+                                        <p class="service-steps__descr">Специалисты компании Smart Optima оказывают любые услуги по ремонту оборудования на время действия гарантии</p>
                                     </div>
                                 </div>
                             </section>
@@ -174,6 +180,11 @@
         <include src="src/templates/dialogs/order-dialog.html"></include>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.5/jquery.inputmask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/10.0.2/js/intlTelInput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/10.0.2/js/utils.js"></script>
     <script src="js/main.js"></script>
 
 </body>
