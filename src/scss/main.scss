@@ -921,51 +921,34 @@ body.menu-opened {
 }
 
 .service-article {
-    section {
-        &:not(:last-of-type) {
-            margin-bottom: 60px;
-        }
-
-        header {
-            text-align: center;
-            max-width: 770px;
-            margin: auto;
-
-            & > span {
-                font-size: 20px;
-                color: $blue;
-            }
-        }
-
-        h2, h3 {
-            font-size: 36px;
-            font-weight: bold;
-            margin: 25px 0 30px;
-        }
-
-        img {
-            margin: 35px 0;
-        }
-
-        ul {
-            @extend .list;
-            margin: 30px auto;
-            max-width: 450px;
-            text-align: left;
-        }
-    }
-}
-
-.service-steps {
     text-align: center;
-    max-width: 770px;
+    //max-width: 770px;
     margin: auto;
 
-    & > div:not(:last-child) {
-        margin-bottom: 30px;
+    h4 {
+        font-size: 20px;
+        color: $blue;
+        font-weight: normal;
     }
 
-    &__title {
+    h2, h3 {
+        font-size: 36px;
+        font-weight: bold;
+        margin: 25px 0 30px;
+    }
+
+    img {
+        margin: 35px 0;
+    }
+
+    ul {
+        @extend .list;
+        margin: 30px auto;
+        max-width: 450px;
+        text-align: left;
+    }
+
+    h3 {
         font-size: 21px;
         font-weight: normal;
         margin: 0 0 15px;
@@ -1083,6 +1066,7 @@ body.menu-opened {
         li {
             font-size: 14px;
             padding: 0 5px 15px;
+            min-height: 40px;
             border-bottom: 2px solid transparent;
             display: flex;
             align-items: center;

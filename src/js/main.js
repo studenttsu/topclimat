@@ -155,8 +155,8 @@ $(function() {
 
     $('.mobile-menu__backdrop').on('click', () => $('.mobile-menu').removeClass('opened'));
 
-    $('.mobile-menu .arrow-btn').on('click', function () {
-        $(this).toggleClass('active');
+    $('.mobile-menu li.with-secondary > div').on('click', function () {
+        $(this).find('.arrow-btn').toggleClass('active')
         $(this).closest('li').toggleClass('active');
         $(this).closest('li').find('.sub-links').slideToggle('opened');
     });

@@ -5633,19 +5633,19 @@ img {
   text-align: center;
 }
 
-.list, .service-article section ul {
+.list, .service-article ul {
   list-style: none;
   margin: 15px 0;
   padding: 0;
 }
-.list li, .service-article section ul li {
+.list li, .service-article ul li {
   padding-left: 20px;
   position: relative;
 }
-.list li:not(:last-child), .service-article section ul li:not(:last-child) {
+.list li:not(:last-child), .service-article ul li:not(:last-child) {
   margin-bottom: 4px;
 }
-.list li:before, .service-article section ul li:before {
+.list li:before, .service-article ul li:before {
   content: "";
   width: 6px;
   height: 6px;
@@ -6055,6 +6055,8 @@ figure figcaption {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 11px 0;
+  cursor: pointer;
 }
 .mobile-menu__inner ul li.active {
   padding-bottom: 12px;
@@ -7150,41 +7152,29 @@ body.menu-opened {
   width: 100%;
 }
 
-.service-article section:not(:last-of-type) {
-  margin-bottom: 60px;
-}
-.service-article section header {
+.service-article {
   text-align: center;
-  max-width: 770px;
   margin: auto;
 }
-.service-article section header > span {
+.service-article h4 {
   font-size: 20px;
   color: #346fee;
+  font-weight: normal;
 }
-.service-article section h2, .service-article section h3 {
+.service-article h2, .service-article h3 {
   font-size: 36px;
   font-weight: bold;
   margin: 25px 0 30px;
 }
-.service-article section img {
+.service-article img {
   margin: 35px 0;
 }
-.service-article section ul {
+.service-article ul {
   margin: 30px auto;
   max-width: 450px;
   text-align: left;
 }
-
-.service-steps {
-  text-align: center;
-  max-width: 770px;
-  margin: auto;
-}
-.service-steps > div:not(:last-child) {
-  margin-bottom: 30px;
-}
-.service-steps__title {
+.service-article h3 {
   font-size: 21px;
   font-weight: normal;
   margin: 0 0 15px;
@@ -7285,6 +7275,7 @@ body.menu-opened {
 .calc-form .rooms li {
   font-size: 14px;
   padding: 0 5px 15px;
+  min-height: 40px;
   border-bottom: 2px solid transparent;
   display: flex;
   align-items: center;
