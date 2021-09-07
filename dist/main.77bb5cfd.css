@@ -5544,6 +5544,7 @@ img {
   line-height: 45px;
   padding: 0 19px;
   border: 1px solid #ebebeb;
+  background: #fff;
   font-size: 14px;
   outline: 0;
   transition: 0.3s border-color;
@@ -6368,7 +6369,7 @@ body.menu-opened {
 .service-card__img {
   margin-top: auto;
   flex-shrink: 0;
-  background: right 50%/contain no-repeat right bottom;
+  background: right bottom 50%/contain no-repeat;
   flex-grow: 1;
 }
 
@@ -6621,14 +6622,32 @@ body.menu-opened {
   background-color: #346fee;
 }
 
+.catalog .rail-list {
+  position: static;
+  flex-wrap: wrap;
+  cursor: default;
+}
+@media (max-width: 960px) {
+  .catalog .rail-list {
+    position: absolute;
+    flex-wrap: nowrap;
+    cursor: grab;
+  }
+}
 .catalog__categories {
-  height: 46px;
+  margin-top: -10px;
   margin-bottom: 10px;
   padding-bottom: 20px;
   box-sizing: content-box;
 }
+@media (max-width: 960px) {
+  .catalog__categories {
+    height: 46px;
+  }
+}
 .catalog__categories .btn {
   min-width: 140px;
+  margin-top: 10px;
 }
 .catalog__categories .btn:not(:last-child) {
   margin-right: 12px;

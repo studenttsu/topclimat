@@ -56,7 +56,7 @@ body.menu-opened {
     &__img {
         margin-top: auto;
         flex-shrink: 0;
-        background: right 50%/contain no-repeat right bottom;
+        background: right bottom 50%/contain no-repeat;
         flex-grow: 1;
     }
 }
@@ -347,14 +347,31 @@ body.menu-opened {
 }
 
 .catalog {
+    .rail-list {
+        position: static;
+        flex-wrap: wrap;
+        cursor: default;
+
+        @include _960() {
+            position: absolute;
+            flex-wrap: nowrap;
+            cursor: grab;
+        }
+    }
+
     &__categories {
-        height: 46px;
+        margin-top: -10px;
         margin-bottom: 10px;
         padding-bottom: 20px;
         box-sizing: content-box;
 
+        @include _960() {
+            height: 46px;
+        }
+
         .btn {
             min-width: 140px;
+            margin-top: 10px;
 
             &:not(:last-child) {
                 margin-right: 12px;
