@@ -2,7 +2,6 @@
   "name": "topclimat",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "start": "parcel serve src/*.html",
     "build": "parcel build src/*.html"
@@ -11,13 +10,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "parcel-bundler": "^1.12.5",
-    "posthtml-include": "^1.7.1",
-    "sass": "^1.37.5"
+    "@parcel/transformer-sass": "^2.6.0",
+    "parcel": "^2.6.0",
+    "posthtml-include": "^1.7.4"
   },
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
-    "@fancyapps/ui": "^4.0.0-beta.1",
+    "@fancyapps/ui": "^4.0.27",
     "bootstrap": "^5.1.0",
     "inputmask": "^5.0.6",
     "jquery": "^3.6.0",

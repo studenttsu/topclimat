@@ -1,4 +1,7 @@
-import { Fancybox, Carousel } from "@fancyapps/ui";
+import { Carousel } from "@fancyapps/ui";
+import { Autoplay } from "@fancyapps/ui/dist/carousel.autoplay.esm";
+
+Carousel.Plugins.Autoplay = Autoplay;
 
 $(function() {
     function phone_mask() {
@@ -124,12 +127,15 @@ $(function() {
     const sliderEl = document.querySelector(".slider-main");
 
     if (sliderEl) {
-        const logoCarousel = new Carousel(document.querySelector(".slider-main"), {
+        new Carousel(document.querySelector(".slider-main"), {
             friction: 0.83,
             Dots: true,
             slidesPerPage: 1,
             center: false,
-            fill: true
+            fill: true,
+            Autoplay: {
+                timeout: 4500,
+            },
         });
     }
 
